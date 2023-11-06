@@ -22,6 +22,7 @@ def main():
     parser.add_argument('-s', '--chunk-size', dest='chunk_size', default="100MB", help='chunk size per upload in bytes; note: chunk_size*thread will be loaded into memory [default: 100MB]')
     parser.add_argument('-m', '--copy-size', dest='chunk_copy_size', default="1MB", help='specifies size to copy the main file into pieces [default: 1MB]')
     parser.add_argument('-t', '--timeout', type=int, default=10, help='specifies timeout time (in seconds) [default: 10]')
+    parser.add_argument('-pw', '--password', type=str, default=None, help='password for downloading a protected file')
 
     args = parser.parse_args()
 
