@@ -250,7 +250,7 @@ class GFile:
 
         download_url = self.uri.rsplit('/', 1)[0] + '/download.php?file=' + file_id
         if self.password:
-            download_url = download_url + '&dlkey=' self.password
+            download_url = download_url + '&dlkey=' + self.password
 
         if self.aria2:
             cookie_str = "; ".join([f"{cookie.name}={cookie.value}" for cookie in self.session.cookies])
